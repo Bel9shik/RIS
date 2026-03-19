@@ -36,7 +36,6 @@ docker compose down && docker compose build --no-cache && docker compose up -d
 |--------|----------|
 | `POST /api/hash/crack` | Тело: `{"hash":"<md5>","maxLength":N}` → `{ "requestId": "..." }` |
 | `GET /api/hash/status?requestId=<uuid>` | Статус: `QUEUED`, `IN_PROGRESS`, `READY`, `ERROR`; для `READY` — поле `data` со списком слов |
-| `GET /api/hash/dictionary` | Снимок in-memory кэша результатов (отладка) |
 
 ## Скрипты (`scripts/`)
 
