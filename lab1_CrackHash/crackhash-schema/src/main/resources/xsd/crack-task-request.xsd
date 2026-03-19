@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://nsu.kardash/crackhash/task-request"
+           xmlns:req="http://nsu.kardash/crackhash/task-request"
+           elementFormDefault="qualified">
+
+    <xs:element name="CrackTaskRequest" type="req:CrackTaskRequestType"/>
+
+    <xs:complexType name="CrackTaskRequestType">
+        <xs:sequence>
+            <xs:element name="requestId" type="xs:string"/>
+            <xs:element name="hash" type="xs:string"/>
+            <xs:element name="maxLength" type="xs:int"/>
+            <xs:element name="alphabet" type="xs:string"/>
+            <xs:element name="partNumber" type="xs:int"/>
+            <xs:element name="partCount" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

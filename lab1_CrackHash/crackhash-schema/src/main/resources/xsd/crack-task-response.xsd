@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://nsu.kardash/crackhash/task-response"
+           xmlns:res="http://nsu.kardash/crackhash/task-response"
+           elementFormDefault="qualified">
+
+    <xs:element name="CrackTaskResponse" type="res:CrackTaskResponseType"/>
+
+    <xs:complexType name="CrackTaskResponseType">
+        <xs:sequence>
+            <xs:element name="requestId" type="xs:string"/>
+            <xs:element name="partNumber" type="xs:int"/>
+            <xs:element name="words" type="res:WordsType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="WordsType">
+        <xs:sequence>
+            <xs:element name="word" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
